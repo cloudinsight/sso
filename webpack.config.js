@@ -1,3 +1,18 @@
+const plugins = [];
+const webpack = require('webpack');
+const readFileSync = require('fs').readFileSync;
+const execSync = require('child_process').execSync;
+
+let localIdentName = 'sso-[local]';
+
+if (process.env.NODE_ENV === 'production') {
+  localIdentName = 'sso-[hash:base64:8]';
+  const banner = readFileSync('./LICENSE').toString();
+  const revision = execSync('git rev-parse HEAD').toString()
+  const url = `https://github.com/cloudinsight/sso/commit/${revision}`;
+  plugins.push(new webpack.BannerPlugin(`${banner}\n${url}`));
+}
+
 module.exports = {
   entry: {
     footer: './src/footer.js',
@@ -14,8 +29,8 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.(c|le)ss$/,
-        loader: "style!css?modules&localIdentName=sso-[local]"
+        test: /\.css$/,
+        loader: `style!css?modules&localIdentName=${localIdentName}`
       },
       {
         test: /\.ejs$/,
@@ -26,5 +41,6 @@ module.exports = {
         loader: 'url'
       }
     ]
-  }
+  },
+  plugins: plugins
 }
