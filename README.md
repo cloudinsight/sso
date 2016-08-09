@@ -1,6 +1,14 @@
 # sso
 
-`Cloudinsight` 的单点登录插件。
+`Cloudinsight` 的单点登录插件, 只用在页面里引入改模块就可以显示跟登录相关的一些控件。
+
+**引入前**
+
+![](./docs/before.png)
+
+**引入后**
+
+![](./docs/after.png)
 
 ## 关于
 
