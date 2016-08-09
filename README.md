@@ -1,2 +1,26 @@
 # sso
-Single sign on widgets for Cloudinsight product
+
+`Cloudinsight` 的单点登录插件。
+
+## 关于
+
+- 栈格系统基于 `purecss`
+- 使用了 `css-modules` 技术， 不会污染全局的 `css`
+- 相关图片使用了 `data-url` 编码
+
+## 使用
+
+**需要哪个组件就在页面中引入就可以了**
+
+| 文件                    | 对应组件                    |
+|-------------------------|----------------------------|
+| `dist/nav.js`           | 顶部快速跳转                |
+| `dist/footer.js`        | 底部超链接                  |
+
+## 本地开发
+
+```sh
+npm install
+npm start
+open http://127.0.0.1:8080/
+```
