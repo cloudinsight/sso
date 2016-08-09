@@ -1,2 +1,5 @@
 # sso
-Single sign on widgets for Cloudinsight product
+
+Cloudinsight 的单点登录插件
+
+`sso.js`
