@@ -1,6 +1,6 @@
 {
   "name": "sso",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Single sign on widgets for Cloudinsight products",
   "main": "index.js",
   "scripts": {
