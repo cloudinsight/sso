@@ -5,25 +5,126 @@
   text-align: center;
   padding-bottom: 60px;
 }
-
-.footer h4 {
-  font-size: 20px;
-  color: white;
+.footer-nav-block{
+  padding-top: 58px;
+  padding-bottom: 58px;
+  color: #4e535b;
+  background-color: #1f2124;
 }
-
-.footer a {
+.footer-nav-block ol li{
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.pure-u-lg-1-6{
+  text-align: center;
+}
+@media (min-width: 768px){
+  .container {
+    width: 750px;
+  }
+}
+@media (max-width: 779px) {
+  .socialLink p{
+    display: none !important;
+  }
+  .copyright-link{
+    width: 60% !important;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 779px) and (max-width: 1023px) {
+  .copyright-link{
+    width: 70% !important;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1023px) {
+  .support {
+    padding-top: 46px;
+  }
+  .brand-logo {
+    height: 3em;
+    margin: 0 auto 20px !important;
+    float: none !important;
+  }
+  .copyright{
+    float: none !important;
+    margin: 0 auto !important;
+  }
+}
+@media (min-width: 1024px){
+  .pure-u-lg-1-6{
+    text-align: left !important;
+  }
+  .brand-logo {
+    float: left;
+    margin-bottom: 0;
+  }
+  .pure-u-lg-1-6:nth-child(3){
+    border-right: 1px solid #2b2e32 !important;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 1210px) and (min-width: 1024px) {
+  .copyright-link{
+    width: 32% !important;
+    margin-left: 9%;
+  }
+  .socialLink p {
+    display: block !important;
+  }
+  .socialLink span {
+    margin-right: 0 !important;
+  }
+}
+.copyright-link{
+  width: 48%;
+}
+.pure-u-1-3{
+  text-align: center;
+}
+.footer h4 {
+  font-weight: normal !important;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.container .support a{
+  color: #fff;
+  font-size: 18px;
+  font-family: "Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;
+}
+.footer a{
   text-decoration: none;
-  color: #999999;
+}
+.footer ol li a {
+  text-decoration: none;
+  color: rgba(255,255,255,.6);
 }
 
 .footer ol {
   list-style: none;
-  line-height: 2em;
   padding: 0;
 }
+.container{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container{
 
+}
+
+.pure-u-lg-1-6:nth-child(3){
+  border: none;
+}
 .brand {
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #191a1d;
+  color: #3f4146;
 }
 
 .support {
@@ -39,20 +140,84 @@
 }
 
 .brand-logo {
-  height: 60px;
-  margin: 0 auto;
-  background: url(../images/brand.svg) no-repeat center;
+  width: 10em;
+  height: 4em;
+  margin-right: 1em;
+  background: url(../images/brand.svg) no-repeat;
+  float: left;
 }
 
-@media screen and (min-width: 64em) {
-  .footer .pure-g {
+.footer .pure-g {
     margin: 0 auto;
     width: 80%;
-  }
-
-  .footer .support {
-    border-top: none;
-    border-left: 1px solid;
-  }
 }
 
+.footer .support {
+    border-top: none;
+}
+.copyright-text{
+  min-width: 484px !important;
+  padding-top: 15px;
+}
+.socialLink{
+  float: left;
+  font-size: .625em;
+  line-height: 71px;
+  text-align: center;
+}
+.socialLink span{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.socialLink p{
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+.github{
+  background: url("../images/github.svg") no-repeat;
+}
+.oschina{
+  background: url("../images/oschina.svg") no-repeat;
+}
+.weibo{
+  background: url("../images/weibo.svg") no-repeat;
+}
+.wechat{
+  background: url("../images/wechat.svg") no-repeat;
+}
+.QRcode{
+  position: relative;
+}
+.socialLink .wechatQR{
+  display: none;
+  width: 150px;
+  height: 160px;
+  position: absolute;
+  top: -230px;
+  left: -23px;
+  background: url("../images/wechatQR.svg");
+  background-size: cover;
+}
+.socialLink .show{
+  display: block !important;
+}
+.copyright{
+  float: left;
+  margin: 0 0 10px;
+  font-size: 10px;
+  min-height: 48px;
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+.brand a{
+  color: #3f4146;
+}
+.cr-end-time{
+
+}
