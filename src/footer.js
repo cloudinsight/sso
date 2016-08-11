@@ -15,12 +15,12 @@ element.innerHTML = compiled({
 
 var nowDate = new Date();
 $(document).ready(function () {
-  $('.sso-cr-end-time').text(nowDate.getFullYear());
-  $('.sso-wechat').mouseover(function () {
-    $('.sso-wechatQR').addClass('sso-show');
+  $("."+style['cr-end-time']).text(nowDate.getFullYear());
+  $("."+style['wechat']).mouseover(function () {
+    $('.'+style['wechatQR']).addClass(style['show']);
   })
-  $('.sso-wechat').mouseout(function () {
-    $('.sso-wechatQR').removeClass('sso-show');
+  $("."+style['wechat']).mouseout(function () {
+    $('.'+style['wechatQR']).removeClass(style['show']);
   })
 });
 

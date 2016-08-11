@@ -10,15 +10,13 @@ element.innerHTML = compiled({
   style
 });
 $(document).ready(function(){
-  $('.sso-burger-wrapper').click(function(){
-    if($('.sso-main-navblock').hasClass('sso-navOpen')){
-      $('body').removeClass('sso-homeShow');
-      $('.sso-main-navblock').removeClass('sso-navOpen');
-      $('.sso-burger').removeClass('sso-active-burger');
+  $('.'+style['burger-wrapper']).click(function(){
+    if($('.'+style['main-navblock']).hasClass(style['navOpen'])){
+      $('.'+style['main-navblock']).removeClass(style['navOpen']);
+      $('.'+style['burger']).removeClass(style['active-burger']);
     }else{
-      $('body').addClass('sso-homeShow');
-      $('.sso-main-navblock').addClass('sso-navOpen');
-      $('.sso-burger').addClass('sso-active-burger');
+      $('.'+style['main-navblock']).addClass(style['navOpen']);
+      $('.'+style['burger']).addClass(style['active-burger']);
     }
   });
 });
