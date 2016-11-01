@@ -2,6 +2,16 @@ body{
   font-size: 16px;
   line-height: 1.42857143;
 }
+i{
+  font-style: normal;
+  font-size: 10px;
+  font-weight: bold;
+}
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .nav {
   position: absolute;
   right: 0;
@@ -9,6 +19,7 @@ body{
   margin-bottom: 1em;
   text-align: center;
   padding-left: 0;
+  z-index: 1100;
 }
 
 .nav .nav-container a {
@@ -23,6 +34,9 @@ body{
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
+}
+.nav a:hover{
+  opacity: 0.6;
 }
 .nav .navOpen{
   position: fixed;
@@ -174,4 +188,99 @@ body{
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   background: #fff !important;
+}
+.accountInfo{
+  display: inline-block;
+}
+.Open{
+  border-color: #ffffff !important;
+}
+.infoBox{
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 2px solid #333;
+  transition: 0.3s all ease-out;
+}
+.infoBox span{
+  margin-right: 20px;
+}
+.infoBox i{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+}
+.xiajiantou{
+  background: url("../templates/up.svg") no-repeat;
+}
+.right{
+  background: url("../templates/right.svg") no-repeat;
+  display: block;
+  float: right !important;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+.shangjiantou{
+  background: url("../templates/down.svg") no-repeat;
+}
+.info span,.info i{
+  float: left;
+}
+.jiahao{
+  background: url("../templates/add.svg") no-repeat;
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+  margin: 0 -3px 0 -10px;
+  position: relative;
+  top: -4px;
+
+}
+.info{
+  display: none;
+  padding: 5px 0 0 0;
+  top: 45px;
+  right: 0;
+  position: absolute;
+  border: 2px solid #fff;
+  width: 250px;
+}
+.info li{
+  cursor: pointer;
+  padding: 0 10px;
+  text-align: left;
+  margin-top: -1px;
+  transition: 0.3s all ease-out;
+}
+.info li:hover{
+  background-color: #ffffff;
+  opacity: 0.6;
+}
+.info p{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 10px;
+  border-top: 1px solid #fff;
+}
+.right p{
+  border: none !important;
+}
+.info li a{
+  height: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: normal !important;
+
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.infoList li:nth-child(1) p{
+  border: none;
+}
+.open{
+  display: block !important;
 }

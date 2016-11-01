@@ -90,6 +90,10 @@
   margin-bottom: 8px;
   margin-top: 8px;
 }
+.footer h4 a{
+  text-decoration: none;
+  color: #fff;
+}
 .container .support a{
   color: #fff;
   font-size: 18px;
@@ -97,6 +101,12 @@
 }
 .footer a{
   text-decoration: none;
+}
+.footer a:hover{
+  text-decoration: none;
+  color: #f5c538;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition:all 0.3s ease-in-out;
 }
 .footer ol li a {
   text-decoration: none;
@@ -191,16 +201,19 @@
 .wechat{
   background: url("../images/wechat.svg") no-repeat;
 }
-.QRcode{
+.qr{
   position: relative;
+}
+.QRcode{
+  /*position: relative;*/
 }
 .socialLink .wechatQR{
   display: none;
   width: 150px;
   height: 160px;
   position: absolute;
-  top: -230px;
-  left: -23px;
+  top: -187px;
+  left: -56px;
   background: url("../images/wechatQR.svg");
   background-size: cover;
 }

@@ -7,7 +7,26 @@
         <a href="//docs-ci.oneapm.com">文档</a>
         <a href="//cloudinsight.oneapm.com/about/group.html">关于</a>
         <a href="//cloudinsight.daoapp.io/">技术博客</a>
-        <a href="//user.oneapm.com/pages/v2/login" id="loginIn" class="<%= style['loginIn'] %> <%= style['btn'] %>">登录</a>
-        <a href="//user.oneapm.com/pages/v2/signup/" id="signUp" class="<%= style['signUp'] %> <%= style['btn'] %>">注册</a>
+        <div class="<%= style['accountBtn']%>" style="display: none">
+            <a href="//user.oneapm.com/pages/v2/login" id="loginIn" class="<%= style['loginIn'] %> <%= style['btn'] %>">登录</a>
+            <a href="//user.oneapm.com/pages/v2/signup/" id="signUp" class="<%= style['signUp'] %> <%= style['btn'] %>">注册</a>
+        </div>
+        <div class="<%= style['accountInfo']%>">
+            <div class="<%= style['infoBox']%>">
+                <span>蓝海讯通科技有限公司</span>
+                <i class="<%= style['xiajiantou']%>"></i>
+            </div>
+            <ul class="<%= style['info']%>">
+                <div class="<%= style['infoList']%>"></div>
+                <li class="<%= style['clearfix']%>">
+                    <p>
+                        <a href="https://cloud.oneapm.com/user/login">
+                            <i class="<%= style['jiahao']%>"></i>
+                            <span>登录到其他账号</span>
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
