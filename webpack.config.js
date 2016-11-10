@@ -12,14 +12,14 @@ if (process.env.NODE_ENV === 'production') {
   const url = `https://github.com/cloudinsight/sso/commit/${revision}`;
   plugins.push(new webpack.BannerPlugin(`${banner}\n${url}`));
 }
-
+let gitDescribe = execSync('git describe').toString().replace(/\s/g, '');
 module.exports = {
   entry: {
     footer: './src/footer.js',
     nav: './src/nav.js'
   },
   output: {
-    filename: '[name].js',
+    filename: gitDescribe+'[name].js',
     path: './dist'
   },
   module: {
