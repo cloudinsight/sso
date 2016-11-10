@@ -14,8 +14,8 @@ ul{
 }
 .nav {
   position: absolute;
-  right: 0;
-  top: 8px;
+  right: 39px;
+  top: 24px;
   margin-bottom: 1em;
   text-align: center;
   padding-left: 0;
@@ -189,8 +189,11 @@ ul{
   transform: rotate(-45deg);
   background: #fff !important;
 }
-.accountInfo{
+.accountBtn{
   display: inline-block;
+}
+.accountInfo{
+  display: none;
 }
 .Open{
   border-color: #ffffff !important;
@@ -286,4 +289,35 @@ ul{
 }
 .changeAccount{
 
+}
+@-webkit-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+@-moz-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+@-o-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+@keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+.activityicon i{
+  position: absolute;
+  left: 306px;
+  width: 46px;
+  height: 46px;
+  z-index: 10;
+  animation: upAndDownImg 2s infinite ease-in-out;
+}
+.activityicon .img1{
+  background: url("../images/teeicon.svg");
+  display: inline-block;
+}
+.activityicon .img2{
+  z-index: 8;
+  display: inline-block;
+  background: url("../images/teeicon2.svg");
+}
+.activityicon:hover .img2{
+  z-index: 10;
+}
+.active {
+  color: #f5c538;
+}
+.show {
+  border-bottom: solid 5px #1b1b1b;
+  padding-bottom: 35px;
 }

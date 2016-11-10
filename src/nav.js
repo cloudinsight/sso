@@ -20,20 +20,52 @@ element.className = style.nav;
 element.innerHTML = compiled({
   style
 });
-// var demo = [
-//   {
-//     groupName: '蓝海讯通有限公司',
-//     defaultGroup: true,
-//     groupId: 123
-//   },{
-//     groupName: 'blueware',
-//     defaultGroup: false,
-//     groupId: 456
-//   },{
-//     groupName:'OneApm',
-//     defaultGroup: false,
-//     groupId: 789
-//   }];
+var ciWeb = [{
+  'linkName' : '产品' ,
+  'link' : "//cloudinsight.oneapm.com/product/product.html"
+},{
+  'linkName' : '文档' ,
+  'link' : "//docs-ci.oneapm.com"
+},{
+  'linkName' : '关于' ,
+  'link' : "//cloudinsight.oneapm.com/about/group.html"
+},{
+  'linkName' : '技术博客' ,
+  'link' : "//cloudinsight.daoapp.io/"
+},{
+  'linkName' : '图片' ,
+  'link' : "//activity/gettee.html"
+}];
+var docsCi = [{
+  'linkName' : '快速入门' ,
+  'link' : "http://docs-ci.oneapm.com/quick-start/"
+},{
+  'linkName' : '安装配置' ,
+  'link' : "http://docs-ci.oneapm.com/agent/"
+},{
+  'linkName' : '操作指南' ,
+  'link' : "http://docs-ci.oneapm.com/platform/"
+},{
+  'linkName' : '实践案例' ,
+  'link' : "http://docs-ci.oneapm.com/best-practise/"
+},{
+  'linkName' : '常见问题' ,
+  'link' : "http://docs-ci.oneapm.com/qa/"
+}];
+var demo = [
+  {
+    groupName: '蓝海讯通有限公司',
+    defaultGroup: true,
+    groupId: 123
+  },{
+    groupName: 'blueware',
+    defaultGroup: false,
+    groupId: 456
+  },{
+    groupName:'OneApm',
+    defaultGroup: false,
+    groupId: 789
+  }];
 function setInfo(data) {
   for (var i=0; i < data.length;i++) {
     var infoItem = document.createElement('li');
@@ -64,7 +96,11 @@ function getInfo() {
     type: 'GET',
     url: `${http}//${host}${BlueWare.urlPrefix}user/groups`,
     success(data) {
-      setInfo(data);
+      if (data.result !== []) {
+        $('.'+style['accountBtn']).css('display', 'none');
+        $('.'+style['accountInfo']).css('display', 'inline-block');
+        setInfo(data.result);
+      }
     }
   })
 }
@@ -90,9 +126,97 @@ function delCookie(name){
     document.cookie=name+"="+cval+";expires="+exp.toGMTString();
   }
 }
+function setDoscNavActive() {
+  var key=window.location.pathname;
+  var arr5=['agent','api','cloud-integration','services','services_example'];
+  var arr1=['quick-start'];
+  var arr3=['release-note','platform','dashboard','metric','alert','event'];
+  var arr4=['use-case','best-practise'];
+  var arr2=['qa'];
+  var Arr=[arr1,arr2,arr3,arr4,arr5];
+  for(var i=0;i<6;i++) {
+    $.each(Arr[i], function (e, a) {
+      if (key.indexOf(a) !== -1) {
+        switch (i + 1) {
+          case 1:
+            key = '/quick-start/';
+            break;
+          case 5:
+            key = '/agent/';
+            break;
+          case 3:
+            key = '/platform/';
+            break;
+          case 4:
+            key = '/best-practise/';
+            break;
+          case 2:
+            key = '/qa/';
+            break;
+        }
+      }
+    });
+  }
+  return key;
+}
+function setWebNavActive() {
+  var key=window.location.pathname;
+  if (key.indexOf('about') !== -1) {
+    return 'about';
+  } else if (key.indexOf('product') !== -1) {
+    return 'product'
+  }
+}
+function createNavBtn(data) {
+  var doscKeyInfo = setDoscNavActive();
+  var webKeyInfo = setWebNavActive();
+  for (var i=0; i < data.length;i++) {
+    var navItem = document.createElement('a');
+    $(navItem).attr('href', data[i].link);
+    console.log(doscKeyInfo);
+    console.log(webKeyInfo);
+    if (data[i].link.indexOf(doscKeyInfo) !== -1 && doscKeyInfo !== '/') {
+      $(navItem).addClass(style['show'])
+    }
+    if (data[i].link.indexOf(webKeyInfo) !== -1) {
+      $(navItem).addClass(style['active'])
+    }
+    if (data[i].linkName === '图片') {
+      navItem.className = style['activityicon'];
+      var img1 = document.createElement('i');
+      img1.className = style['img1'];
+      var img2 = document.createElement('i');
+      img2.className = style['img2'];
+      $(navItem).append(img1);
+      $(navItem).append(img2);
+    } else {
+      navItem.innerHTML = data[i].linkName;
+    }
+    // $('.'+style['nav-container']).append(navItem);
+    $(navItem).insertBefore($('.'+style['loginIn']));
+  }
+}
+function setNavInfo() {
+  var loc = window.location.hostname;
+  switch (loc) {
+    case 'localhost':
+      createNavBtn(ciWeb);
+      break;
+    case 'docs-ci.oneapm.com':
+      createNavBtn(docsCi);
+      break;
+    case 'cloudinsight.oneapm.com':
+      createNavBtn(ciWeb);
+      break
+  }
+}
 $(document).ready(function(){
-  getInfo();
-  // setInfo(demo);
+  setNavInfo();
+  if (window.location.hostname === 'localhost') {
+    setInfo(demo);
+  } else {
+    getInfo();
+  }
   setCookie('key','123');
   // 绑定进入系统接口
   $('.'+style['infoList']).children().each(function() {
