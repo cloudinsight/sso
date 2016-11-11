@@ -173,8 +173,6 @@ function createNavBtn(data) {
   for (var i=0; i < data.length;i++) {
     var navItem = document.createElement('a');
     $(navItem).attr('href', data[i].link);
-    console.log(doscKeyInfo);
-    console.log(webKeyInfo);
     if (data[i].link.indexOf(doscKeyInfo) !== -1 && doscKeyInfo !== '/') {
       $(navItem).addClass(style['show'])
     }
