@@ -382,6 +382,10 @@ ul{
   border-bottom: solid 5px #1b1b1b;
   padding-bottom: 35px !important;
 }
+.navOpen .show{
+  padding-bottom: 1em !important;
+  border: none;
+}
 .nav .nav-container.black a{
   color: #fff;
 }
