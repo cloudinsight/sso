@@ -371,7 +371,7 @@ ul{
 }
 .show {
   border-bottom: solid 5px #1b1b1b;
-  padding-bottom: 35px;
+  padding-bottom: 35px !important;
 }
 .nav .nav-container.black a{
   color: #fff;
