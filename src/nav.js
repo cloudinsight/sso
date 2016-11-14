@@ -89,6 +89,7 @@ function getInfo() {
   $.ajax({
     type: 'GET',
     dataType: 'JSONP',
+    jsonpCallback:"foo",
     url: `${http}//cloud.oneapm.com/v1/user/groups`,
     success(data) {
       if (data.result !== []) {
