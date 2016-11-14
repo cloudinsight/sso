@@ -84,6 +84,7 @@ function openInfo() {
   $(this).find('i').toggleClass(style['shangjiantou']);
   $('.'+style['info']).toggleClass(style['open']);
 }
+const http = window.location.protocol;
 function getInfo() {
   $.ajax({
     type: 'GET',
