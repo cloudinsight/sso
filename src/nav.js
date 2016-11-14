@@ -30,19 +30,19 @@ var ciWeb = [{
 }];
 var docsCi = [{
   'linkName' : '快速入门' ,
-  'link' : "http://docs-ci.oneapm.com/quick-start/"
+  'link' : "/quick-start/"
 },{
   'linkName' : '安装配置' ,
-  'link' : "http://docs-ci.oneapm.com/agent/"
+  'link' : "/agent/"
 },{
   'linkName' : '操作指南' ,
-  'link' : "http://docs-ci.oneapm.com/platform/"
+  'link' : "/platform/"
 },{
   'linkName' : '实践案例' ,
-  'link' : "http://docs-ci.oneapm.com/best-practise/"
+  'link' : "/best-practise/"
 },{
   'linkName' : '常见问题' ,
-  'link' : "http://docs-ci.oneapm.com/qa/"
+  'link' : "/qa/"
 }];
 var demo = [
   {
