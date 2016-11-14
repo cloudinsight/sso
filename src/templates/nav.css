@@ -351,7 +351,7 @@ ul{
 }
 .activityicon i{
   position: absolute;
-  left: 306px;
+  left: 0;
   width: 46px;
   height: 46px;
   z-index: 10;
