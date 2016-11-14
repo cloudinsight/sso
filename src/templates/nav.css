@@ -347,7 +347,7 @@ ul{
 .activityicon{
   width: 60px;
   position: relative;
-  height: 22px;
+  height: 54px;
 }
 .activityicon i{
   position: absolute;
@@ -358,7 +358,7 @@ ul{
   animation: upAndDownImg 2s infinite ease-in-out;
 }
 .navOpen .activityicon i{
-  left: 322px;
+  left: 232px;
 }
 .activityicon .img1{
   background: url("../images/teeicon.svg");
