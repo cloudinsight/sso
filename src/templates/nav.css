@@ -127,7 +127,7 @@ ul{
 .main-navblock{
 
 }
-@media (min-width: 768px){
+@media (min-width: 955px){
   .nav-container {
     display: block !important;
   }
@@ -135,7 +135,7 @@ ul{
 .nav-container{
   display: none;
 }
-@media (min-width: 768px){
+@media (min-width: 955px){
   .burger-wrapper {
     display: none !important;
   }
@@ -205,6 +205,7 @@ ul{
   position: relative;
 }
 .nav .navOpen .nav-container .accountInfo {
+  display: block !important;
   background-color:  #f5c538;;
 }
 .nav .navOpen .nav-container .accountInfo .info{
@@ -345,6 +346,8 @@ ul{
 @keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
 .activityicon{
   width: 60px;
+  position: relative;
+  height: 22px;
 }
 .activityicon i{
   position: absolute;
@@ -353,6 +356,9 @@ ul{
   height: 46px;
   z-index: 10;
   animation: upAndDownImg 2s infinite ease-in-out;
+}
+.navOpen .activityicon i{
+  left: 322px;
 }
 .activityicon .img1{
   background: url("../images/teeicon.svg");

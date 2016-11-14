@@ -66,9 +66,12 @@ function setInfo(data) {
     var rightIcon = document.createElement('i');
     if(data[i].defaultGroup === true){
       rightIcon.className = style['right'];
+      $('.' + style['infoBox']).children('span').html(data[i].groupName);
     }
-    $('.'+style['right']).parent().parent().css('background-color','#fff');
-    $('.'+style['right']).parent().css('color','#333');
+    setTimeout(function () {
+      $(infoBox).parent().css('background-color','#fff');
+      $(infoBox).css('color','#333');
+    },300);
     infoBox.className = style['clearfix'];
     Span.innerHTML = data[i].groupName;
     $(Span).attr('key', data[i].groupId);
@@ -90,7 +93,7 @@ function getInfo() {
     type: 'GET',
     dataType: 'JSONP',
     jsonpCallback:"foo",
-    url: `${http}//cloud.oneapm.com/v1/user/groups`,
+    url: `${http}//ruby-backend.cloudinsight.cc/v1/user/groups`,
     success(data) {
       if (data.result !== []) {
         $('.'+style['accountBtn']).css('display', 'none');
@@ -215,11 +218,7 @@ function setNavInfo() {
 }
 $(document).ready(function(){
   setNavInfo();
-  if (window.location.hostname === 'localhost') {
-    setInfo(demo);
-  } else {
-    getInfo();
-  }
+  getInfo();
   setCookie('key','123');
   // 绑定进入系统接口
   $('.'+style['infoList']).children().each(function() {
