@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --content-base ./base --host 0.0.0.0",
-    "dist": "NODE_ENV=production webpack -p"
+    "dist": "webpack --config webpack.dist.js"
   },
   "repository": {
     "type": "git",

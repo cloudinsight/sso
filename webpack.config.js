@@ -19,7 +19,7 @@ module.exports = {
     nav: './src/nav.js'
   },
   output: {
-    filename: gitDescribe+'[name].js',
+    filename: '[name].js',
     path: './dist'
   },
   module: {

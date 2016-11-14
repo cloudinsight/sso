@@ -76,6 +76,7 @@ function setInfo(data) {
       rightIcon.className = style['right'];
     }
     $('.'+style['right']).parent().parent().css('background-color','#fff');
+    $('.'+style['right']).parent().css('color','#333');
     infoBox.className = style['clearfix'];
     Span.innerHTML = data[i].groupName;
     $(Span).attr('key', data[i].groupId);
@@ -173,13 +174,12 @@ function createNavBtn(data) {
   for (var i=0; i < data.length;i++) {
     var navItem = document.createElement('a');
     $(navItem).attr('href', data[i].link);
-    console.log(doscKeyInfo);
-    console.log(webKeyInfo);
     if (data[i].link.indexOf(doscKeyInfo) !== -1 && doscKeyInfo !== '/') {
       $(navItem).addClass(style['show'])
     }
     if (data[i].link.indexOf(webKeyInfo) !== -1) {
-      $(navItem).addClass(style['active'])
+      $(navItem).addClass(style['active']);
+      $('.'+style['nav-container']).addClass(style['black'])
     }
     if (data[i].linkName === '图片') {
       navItem.className = style['activityicon'];
@@ -193,14 +193,22 @@ function createNavBtn(data) {
       navItem.innerHTML = data[i].linkName;
     }
     // $('.'+style['nav-container']).append(navItem);
-    $(navItem).insertBefore($('.'+style['loginIn']));
+    $(navItem).insertBefore($('.'+style['accountBtn']));
   }
 }
 function setNavInfo() {
   var loc = window.location.hostname;
+  var port = window.location.port;
   switch (loc) {
     case 'localhost':
-      createNavBtn(ciWeb);
+      switch (port) {
+        case '8080': createNavBtn(ciWeb);
+              break;
+        case '4567': createNavBtn(docsCi);
+          break;
+        case '9100': createNavBtn(ciWeb);
+          break;
+      }
       break;
     case 'docs-ci.oneapm.com':
       createNavBtn(docsCi);

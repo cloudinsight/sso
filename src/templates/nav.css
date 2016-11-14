@@ -62,6 +62,9 @@ ul{
   display: block;
   padding-top: 5em;
 }
+.nav .navOpen .nav-container .accountBtn{
+  display: block
+}
 .nav .navOpen .nav-container .loginIn{
   border-color: #fff !important;
   padding: 8px 1.2em;
@@ -85,6 +88,11 @@ ul{
   border: 2px solid #1b1b1b !important;
   font-weight: 400;
   margin-right: 0;
+}
+.nav .nav-container .loginIn:hover{
+  background-color: #333;
+  color: #fff;
+  opacity: 0.8;
 }
 .nav .nav-container .signUp{
   background: #1b1b1b;
@@ -194,6 +202,37 @@ ul{
 }
 .accountInfo{
   display: none;
+  position: relative;
+}
+.nav .navOpen .nav-container .accountInfo {
+  display: block;
+  background-color:  #f5c538;;
+}
+.nav .navOpen .nav-container .accountInfo .info{
+  box-sizing: border-box;
+  width: 100%;
+}
+.nav .navOpen .nav-container .accountInfo .info p{
+  text-align: center;
+  color: #ffffff;
+}
+.nav .navOpen .nav-container .accountInfo .info span{
+  float: none;
+  display: inline-block;
+}
+.nav .navOpen .nav-container .accountInfo .info i{
+  float: none;
+}
+.nav .navOpen .nav-container .accountInfo .info .jiahao{
+  display: inline-block;
+}
+.nav .navOpen .nav-container .accountInfo .info .changeAccount span{
+  position: relative;
+  top: -13px;
+}
+.nav .navOpen .nav-container .accountInfo .info .infoList i{
+  display: inline-block;
+  margin-left: 14px;
 }
 .Open{
   border-color: #ffffff !important;
@@ -216,10 +255,10 @@ ul{
 .xiajiantou{
   background: url("../templates/up.svg") no-repeat;
 }
-.right{
+.nav .nav-container .accountInfo .info .infoList .right{
   background: url("../templates/right.svg") no-repeat;
   display: block;
-  float: right !important;
+  float: right;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -260,6 +299,17 @@ ul{
   background-color: #ffffff;
   opacity: 0.6;
 }
+.navOpen .info li:hover span{
+  color: #333333;
+}
+.navOpen .info li .jiahao{
+  background: url("../images/black_add.svg") no-repeat;
+  background-size: cover;
+}
+.navOpen .info li:hover .jiahao{
+  background: url("../templates/add.svg") no-repeat;
+  background-size: cover;
+}
 .info p{
   box-sizing: border-box;
   margin: 0;
@@ -294,6 +344,9 @@ ul{
 @-moz-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
 @-o-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
 @keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+.activityicon{
+  width: 60px;
+}
 .activityicon i{
   position: absolute;
   left: 306px;
@@ -320,4 +373,23 @@ ul{
 .show {
   border-bottom: solid 5px #1b1b1b;
   padding-bottom: 35px;
+}
+.nav .nav-container.black a{
+  color: #fff;
+}
+.nav .nav-container.black .loginIn{
+  border-color: #fff;
+}
+.nav .nav-container.black .loginIn:hover{
+  background-color: #fff;
+  color: #333;
+}
+.nav .nav-container.black .signUp{
+  background: #f5c538;
+  color: #333;
+  border-color: #f5c538;
+}
+.nav .nav-container.black .signUp:hover{
+  background: #333;
+  color: #f5c538;
 }
