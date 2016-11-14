@@ -67,12 +67,11 @@ function setInfo(data) {
     if(data[i].defaultGroup === true){
       rightIcon.className = style['right'];
       $('.' + style['infoBox']).children('span').html(data[i].groupName);
-    }
-    setTimeout(function () {
-      $(infoBox).parent().css('background-color','#fff');
+      console.log($('.' + style['infoList']));
+      $(infoBox).addClass(style['onlineGroup']);
       $(infoBox).css('color','#333');
-    },300);
-    infoBox.className = style['clearfix'];
+    }
+    $(infoBox).addClass(style['clearfix']);
     Span.innerHTML = data[i].groupName;
     $(Span).attr('key', data[i].groupId);
     infoBox.appendChild(Span);
@@ -95,7 +94,8 @@ function getInfo() {
     jsonpCallback:"foo",
     url: `${http}//cloud.oneapm.com/v1/user/groups`,
     success(data) {
-      if (data.result !== []) {
+      const arr = [];
+      if (data.result.length !== 0) {
         $('.'+style['accountBtn']).css('display', 'none');
         $('.'+style['accountInfo']).css('display', 'inline-block');
         setInfo(data.result);
@@ -229,6 +229,10 @@ $(document).ready(function(){
   setNavInfo();
   getInfo();
   // setCookie('key','123');
+  console.log($('.' + style['onlineGroup']));
+  setTimeout(function () {
+    $('.' + style['onlineGroup']).parent().css('backgroundColor', '#fff');
+  },300);
   // 绑定进入系统接口
   $('.'+style['infoList']).children().each(function() {
     if($(this).find('span').text()){
@@ -236,7 +240,7 @@ $(document).ready(function(){
         var group_id= $(this).find('span').attr('key');
         $.ajax({
           type: 'GET',
-          url: `${http}//${host}${BlueWare.urlPrefix}user/groups/${group_id}/switch`
+          url: `${http}//cloud.oneapm.com/user/groups/${group_id}/switch`
         })
       });
     }
@@ -265,7 +269,13 @@ $(document).ready(function(){
         },
         function(isConfirm){
           if (isConfirm) {
-            delCookie('key');
+            $.ajax({
+              type: 'GET',
+              dataType: 'JSONP',
+              jsonpCallback:"foo",
+              url: `https://cloud.oneapm.com/tpm/account/logout`
+            });
+            window.location= 'http://user.oneapm.com/pages/v2/login_ci';
             swal.close();
           } else {
             swal.close();
