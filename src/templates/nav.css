@@ -340,14 +340,17 @@ ul{
 .changeAccount{
 
 }
-@-webkit-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
-@-moz-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
-@-o-keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
-@keyframes upAndDownImg{ 0%{top: -5px} 50%{top: 5px} 100%{top: -5px}}
+@-webkit-keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
+@-moz-keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
+@-o-keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
+@keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
 .activityicon{
   width: 60px;
   position: relative;
-  height: 54px;
+}
+.navOpen .activityicon{
+  height: 22px;
+  width: 100%;
 }
 .activityicon i{
   position: absolute;
@@ -358,7 +361,7 @@ ul{
   animation: upAndDownImg 2s infinite ease-in-out;
 }
 .navOpen .activityicon i{
-  left: 232px;
+  left: 46.5%;
 }
 .activityicon .img1{
   background: url("../images/teeicon.svg");

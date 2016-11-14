@@ -217,9 +217,18 @@ function setNavInfo() {
   }
 }
 $(document).ready(function(){
+  // $('body').click(function () {
+  //   if(!$('.'+ style['info']).hasClass(style['open'])){
+  //     console.log(1)
+  //     return false
+  //   } else {
+  //     $('.'+ style['info']).removeClass(style['open']);
+  //     console.log(2)
+  //   }
+  // });
   setNavInfo();
   getInfo();
-  setCookie('key','123');
+  // setCookie('key','123');
   // 绑定进入系统接口
   $('.'+style['infoList']).children().each(function() {
     if($(this).find('span').text()){
