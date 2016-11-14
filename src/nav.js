@@ -93,7 +93,7 @@ function getInfo() {
     type: 'GET',
     dataType: 'JSONP',
     jsonpCallback:"foo",
-    url: `${http}//ruby-backend.cloudinsight.cc/v1/user/groups`,
+    url: `${http}//cloud.oneapm.com/v1/user/groups`,
     success(data) {
       if (data.result !== []) {
         $('.'+style['accountBtn']).css('display', 'none');
