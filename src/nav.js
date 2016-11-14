@@ -7,14 +7,6 @@ const style = Object.assign({}, styles);
 
 import compiled from './templates/nav.ejs';
 
-let host;
-if (window.location.port === '') {
-  host = window.location.hostname;
-} else {
-  host = `${window.location.hostname}:${window.location.port}`;
-}
-const http = window.location.protocol;
-
 var element = document.createElement('div');
 element.className = style.nav;
 element.innerHTML = compiled({
@@ -95,7 +87,7 @@ function openInfo() {
 function getInfo() {
   $.ajax({
     type: 'GET',
-    url: `${http}//${host}${BlueWare.urlPrefix}user/groups`,
+    url: `${http}//cloud.oneapm.com/v1/user/groups`,
     success(data) {
       if (data.result !== []) {
         $('.'+style['accountBtn']).css('display', 'none');

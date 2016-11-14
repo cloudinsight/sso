@@ -205,7 +205,6 @@ ul{
   position: relative;
 }
 .nav .navOpen .nav-container .accountInfo {
-  display: block;
   background-color:  #f5c538;;
 }
 .nav .navOpen .nav-container .accountInfo .info{
