@@ -88,6 +88,7 @@ const http = window.location.protocol;
 function getInfo() {
   $.ajax({
     type: 'GET',
+    dataType: 'JSONP',
     url: `${http}//cloud.oneapm.com/v1/user/groups`,
     success(data) {
       if (data.result !== []) {
