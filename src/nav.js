@@ -67,7 +67,6 @@ function setInfo(data) {
     if(data[i].defaultGroup === true){
       rightIcon.className = style['right'];
       $('.' + style['infoBox']).children('span').html(data[i].groupName);
-      console.log($('.' + style['infoList']));
       $(infoBox).addClass(style['onlineGroup']);
       $(infoBox).css('color','#333');
     }
@@ -229,22 +228,26 @@ $(document).ready(function(){
   setNavInfo();
   getInfo();
   // setCookie('key','123');
-  console.log($('.' + style['onlineGroup']));
   setTimeout(function () {
     $('.' + style['onlineGroup']).parent().css('backgroundColor', '#fff');
   },300);
   // 绑定进入系统接口
-  $('.'+style['infoList']).children().each(function() {
-    if($(this).find('span').text()){
-      $(this).click(function () {
-        var group_id= $(this).find('span').attr('key');
-        $.ajax({
-          type: 'GET',
-          url: `${http}//cloud.oneapm.com/user/groups/${group_id}/switch`
-        })
-      });
-    }
-  });
+  setTimeout(function () {
+    $('.'+style['infoList']).children().each(function() {
+      if($(this).find('span').text()){
+        $(this).click(function () {
+          var group_id= $(this).find('span').attr('key');
+          $.ajax({
+            type: 'GET',
+            url: `${http}//cloud.oneapm.com/user/groups/${group_id}/switch`,
+            success(data){
+              window.location = `${http}//cloud.oneapm.com`
+            }
+          })
+        });
+      }
+    });
+  },300);
   $('.'+style['infoBox']).click(openInfo);
   $('.'+style['burger-wrapper']).click(function(){
     if($('.'+style['main-navblock']).hasClass(style['navOpen'])){
