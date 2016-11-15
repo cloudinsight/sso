@@ -220,6 +220,8 @@ $(document).ready(function(){
     var target  = $(e.target);
     if(!target.closest("div").hasClass(style['infoBox'])){
       $('.'+ style['info']).removeClass(style['open']);
+      $('.'+ style['infoBox']).removeClass(style['Open']);
+      $('.'+ style['infoBox']).find('i').removeClass(style['shangjiantou']);
     }
     e.stopPropagation();
   });
