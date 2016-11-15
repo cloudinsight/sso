@@ -274,13 +274,7 @@ $(document).ready(function(){
         },
         function(isConfirm){
           if (isConfirm) {
-            $.ajax({
-              type: 'GET',
-              dataType: 'JSONP',
-              jsonpCallback:"foo",
-              url: `https://cloud.oneapm.com/tpm/account/logout`
-            });
-            window.location= 'http://user.oneapm.com/pages/v2/login_ci';
+            window.location = 'https://cloud.oneapm.com/tpm/account/logout';
             swal.close();
           } else {
             swal.close();
