@@ -1,6 +1,6 @@
 # SSO ( Single Sign On ) 单点登录
 
-[![Travis](https://img.shields.io/travis/cloudinsight/sso.svg?style=flat-square)]()
+[![Travis](https://img.shields.io/travis/cloudinsight/sso.svg?style=flat-square)](https://travis-ci.org/cloudinsight/sso)
 
 `Cloudinsight` 所用的单点登录插件, 只需要在页面里引入对应的 JS 文件就可以在页面上显示跟登录相关的一些功能，
 例如导航条和文档链接。
