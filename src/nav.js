@@ -96,8 +96,10 @@ function getInfo() {
       const arr = [];
       if (data.result.length !== 0) {
         $('.'+style['accountBtn']).css('display', 'none');
-        $('.'+style['accountInfo']).css('display', 'inline-block');
+        $('.'+style['accountInfo']).addClass(style['accountInfoShow']);
         setInfo(data.result);
+      } else {
+        $('.'+style['accountInfo']).removeClass(style['accountInfoShow'])
       }
     }
   })

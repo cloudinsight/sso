@@ -204,8 +204,11 @@ ul{
   display: none;
   position: relative;
 }
+.accountInfo.accountInfoShow{
+  display: inline-block;
+}
 .nav .navOpen .nav-container .accountInfo {
-  display: block !important;
+  display: block;
   background-color:  #f5c538;;
 }
 .nav .navOpen .nav-container .accountInfo .info{
@@ -351,6 +354,7 @@ ul{
 .navOpen .activityicon{
   height: 22px;
   width: 100%;
+  margin-bottom: 20px;
 }
 .activityicon i{
   position: absolute;
