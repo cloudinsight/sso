@@ -26,7 +26,7 @@ var ciWeb = [{
   'link' : "//cloudinsight.daoapp.io/"
 },{
   'linkName' : '图片' ,
-  'link' : "//activity/gettee.html"
+  'link' : "//cloudinsight.oneapm.com/activity/gettee.html"
 }];
 var docsCi = [{
   'linkName' : '快速入门' ,
