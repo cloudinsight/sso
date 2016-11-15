@@ -23,7 +23,7 @@ var ciWeb = [{
   'link' : "//cloudinsight.oneapm.com/about/group.html"
 },{
   'linkName' : '技术博客' ,
-  'link' : "//cloudinsight.daoapp.io/"
+  'link' : "//cloudinsight.oneapm.com/blog"
 },{
   'linkName' : '图片' ,
   'link' : "//cloudinsight.oneapm.com/activity/gettee.html"
