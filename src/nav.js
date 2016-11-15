@@ -216,15 +216,13 @@ function setNavInfo() {
   }
 }
 $(document).ready(function(){
-  // $('body').click(function () {
-  //   if(!$('.'+ style['info']).hasClass(style['open'])){
-  //     console.log(1)
-  //     return false
-  //   } else {
-  //     $('.'+ style['info']).removeClass(style['open']);
-  //     console.log(2)
-  //   }
-  // });
+  $('body').click(function (e) {
+    var target  = $(e.target);
+    if(!target.closest("div").hasClass(style['infoBox'])){
+      $('.'+ style['info']).removeClass(style['open']);
+    }
+    e.stopPropagation();
+  });
   setNavInfo();
   getInfo();
   // setCookie('key','123');
@@ -239,7 +237,9 @@ $(document).ready(function(){
           var group_id= $(this).find('span').attr('key');
           $.ajax({
             type: 'GET',
-            url: `${http}//cloud.oneapm.com/user/groups/${group_id}/switch`,
+            dataType: 'JSONP',
+            jsonpCallback:"foo",
+            url: `${http}//cloud.oneapm.com/v1/user/groups/${group_id}/switch`,
             success(data){
               window.location = `${http}//cloud.oneapm.com`
             }
