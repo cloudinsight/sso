@@ -24,9 +24,6 @@ var ciWeb = [{
 },{
   'linkName' : '技术博客' ,
   'link' : "//cloudinsight.oneapm.com/blog"
-},{
-  'linkName' : '图片' ,
-  'link' : "//cloudinsight.oneapm.com/activity/gettee.html"
 }];
 var docsCi = [{
   'linkName' : '快速入门' ,
