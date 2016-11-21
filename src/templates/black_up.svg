@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>up_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="up_white" fill="#FFFFFF">
+            <g id="Group" transform="translate(0.000000, 43.000000)">
+                <path d="M4.3531874,4.22720026 C-1.20350878,9.81042004 -1.20350878,18.8549709 4.3531874,24.4249288 L89.7592098,109.89726 C92.5441888,112.668977 96.2044469,114.061467 99.864705,114.061467 C103.524963,114.061467 107.171959,112.668977 109.956938,109.89726 L195.349699,24.4249288 C200.932919,18.8549709 200.932919,9.81042004 195.349699,4.22720026 C189.793003,-1.34275773 180.761714,-1.34275773 175.205018,4.22720026 L99.8381814,79.6338219 L24.5111306,4.22720026 C18.9676962,-1.32949592 9.93640719,-1.32949592 4.3531874,4.22720026 L4.3531874,4.22720026 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

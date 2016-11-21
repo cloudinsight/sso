@@ -409,6 +409,24 @@ ul{
   background: #333;
   color: #f5c538;
 }
+.nav .nav-container.black .accountInfo{
+  color: #fff;
+}
+.nav .nav-container.black .accountInfo .infoBox{
+  border-color: rgba(255,255,255,0.6);
+}
+.nav .nav-container.black .accountInfo .infoBox .shangjiantou{
+  background: url("../templates/black_down.svg") no-repeat;
+  background-size: contain;
+}
+.nav .nav-container.black .accountInfo .xiajiantou{
+  background: url("../templates/black_up.svg") no-repeat;
+  background-size: cover;
+}
+.nav .nav-container.black .accountInfo .info .jiahao{
+  background: url("../images/black_add.svg") no-repeat;
+  background-size: cover;
+}
 .onlineGroup{
 
 }
