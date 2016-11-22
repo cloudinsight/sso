@@ -341,7 +341,8 @@ ul{
   display: block !important;
 }
 .changeAccount{
-
+  position: relative;
+  left: -7px;
 }
 @-webkit-keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
 @-moz-keyframes upAndDownImg{ 0%{top: -10px} 50%{top: 0} 100%{top: -10px}}
