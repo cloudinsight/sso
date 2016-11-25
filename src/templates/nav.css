@@ -395,7 +395,7 @@ ul{
   color: #fff;
 }
 .nav .nav-container.black .loginIn{
-  border-color: #fff;
+  border-color: #fff !important;
 }
 .nav .nav-container.black .loginIn:hover{
   background-color: #fff;
@@ -404,11 +404,12 @@ ul{
 .nav .nav-container.black .signUp{
   background: #f5c538;
   color: #333;
-  border-color: #f5c538;
+  border-color: #f5c538 !important;
 }
 .nav .nav-container.black .signUp:hover{
   background: #333;
   color: #f5c538;
+  opacity: 1;
 }
 .nav .nav-container.black .accountInfo{
   color: #fff;
