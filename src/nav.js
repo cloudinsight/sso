@@ -177,7 +177,8 @@ function createNavBtn(data) {
     }
     if (data[i].link.indexOf(webKeyInfo) !== -1 || webKeyInfo === 'price') {
       $(navItem).addClass(style['active']);
-      $('.'+style['nav-container']).addClass(style['black'])
+      $('.'+style['nav-container']).addClass(style['black']);
+      $('.'+style['main-navblock']).addClass(style['black']);
     }
     if (data[i].linkName === '图片') {
       navItem.className = style['activityicon'];

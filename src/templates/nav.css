@@ -35,7 +35,7 @@ ul{
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
 }
-.nav a:hover{
+.nav .nav-container a:hover{
   opacity: 0.6;
 }
 .nav .navOpen{
@@ -64,6 +64,9 @@ ul{
 }
 .nav .navOpen .nav-container .accountBtn{
   display: block
+}
+.nav .nav-container .accountBtn a:hover {
+  opacity: 1 !important;
 }
 .nav .navOpen .nav-container .loginIn{
   border-color: #fff !important;
@@ -148,6 +151,12 @@ ul{
   position: relative;
 }
 .burger-wrapper .burger, .burger-wrapper .burger:after, .burger-wrapper .burger:before {
+  background: #1b1b1b !important;
+}
+.black .burger-wrapper .burger,.black .burger-wrapper .burger:after,.black .burger-wrapper .burger:before {
+  background: #fff !important;
+}
+.navOpen .burger-wrapper .burger{
   background: #1b1b1b !important;
 }
 .burger-wrapper .burger:after {
