@@ -163,7 +163,7 @@ function setWebNavActive() {
   } else if (key.indexOf('product') !== -1) {
     return 'product'
   } else if (key.indexOf('price') !== -1) {
-      return 'price'
+    return 'price'
   }
 }
 function createNavBtn(data) {
@@ -175,7 +175,7 @@ function createNavBtn(data) {
     if (data[i].link.indexOf(doscKeyInfo) !== -1 && doscKeyInfo !== '/') {
       $(navItem).addClass(style['show'])
     }
-    if (data[i].link.indexOf(webKeyInfo) !== -1) {
+    if (data[i].link.indexOf(webKeyInfo) !== -1 || webKeyInfo === 'price') {
       $(navItem).addClass(style['active']);
       $('.'+style['nav-container']).addClass(style['black'])
     }
