@@ -217,7 +217,7 @@ ul{
   display: inline-block;
 }
 .nav .navOpen .nav-container .accountInfo {
-  display: block;
+  display: none;
   background-color:  #f5c538;;
 }
 .nav .navOpen .nav-container .accountInfo .info{
