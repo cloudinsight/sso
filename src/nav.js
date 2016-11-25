@@ -24,6 +24,9 @@ var ciWeb = [{
 },{
   'linkName' : '技术博客' ,
   'link' : "//cloudinsight.oneapm.com/blog"
+},{
+    'linkName' : '报价' ,
+    'link' : "//cloudinsight.oneapm.com/price.html"
 }];
 var docsCi = [{
   'linkName' : '快速入门' ,
@@ -175,7 +178,7 @@ function createNavBtn(data) {
     if (data[i].link.indexOf(doscKeyInfo) !== -1 && doscKeyInfo !== '/') {
       $(navItem).addClass(style['show'])
     }
-    if (data[i].link.indexOf(webKeyInfo) !== -1 || webKeyInfo === 'price') {
+    if (data[i].link.indexOf(webKeyInfo) !== -1) {
       $(navItem).addClass(style['active']);
       $('.'+style['nav-container']).addClass(style['black']);
       $('.'+style['main-navblock']).addClass(style['black']);

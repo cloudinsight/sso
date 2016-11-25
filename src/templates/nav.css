@@ -390,7 +390,7 @@ ul{
   z-index: 10;
 }
 .active {
-  color: #f5c538;
+  color: #f5c538 !important;
 }
 .show {
   border-bottom: solid 5px #1b1b1b;
