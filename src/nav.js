@@ -167,6 +167,8 @@ function setWebNavActive() {
     return 'product'
   } else if (key.indexOf('price') !== -1) {
     return 'price'
+  } else if (key.indexOf('blog') !== -1) {
+    return 'blog'
   }
 }
 function createNavBtn(data) {
