@@ -214,7 +214,10 @@ ul{
   position: relative;
 }
 .accountInfo.accountInfoShow{
-  display: inline-block;
+  display: inline-block !important;
+}
+.nav .navOpen .accountInfo.accountInfoShow{
+  display: block !important;
 }
 .nav .navOpen .nav-container .accountInfo {
   display: none;
