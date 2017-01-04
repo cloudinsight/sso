@@ -314,6 +314,11 @@ ul{
   background-color: #ffffff;
   opacity: 0.6;
 }
+
+.black li:hover span{
+  color: #333333;
+}
+
 .navOpen .info li:hover span{
   color: #333333;
 }
@@ -433,6 +438,12 @@ ul{
   background: url("../templates/black_down.svg") no-repeat;
   background-size: contain;
 }
+.nav .nav-container.black .accountInfo .info {
+  background-color: rgba(0,0,0,0.6);
+}
+.nav .nav-container.black .accountInfo .info li p{
+  color: white;
+}
 .nav .nav-container.black .accountInfo .xiajiantou{
   background: url("../templates/black_up.svg") no-repeat;
   background-size: cover;
@@ -443,4 +454,8 @@ ul{
 }
 .onlineGroup{
 
+}
+.nav .nav-container.black .accountInfo .info .changeOver .jiahao{
+  background: url("../templates/add.svg") no-repeat;
+  background-size: cover;
 }

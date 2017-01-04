@@ -257,6 +257,12 @@ $(document).ready(function(){
       }
     });
   },300);
+  $('.'+style['changeAccount']).parent().mouseover(function () {
+     $(this).addClass('sso-changeOver')
+  });
+  $('.'+style['changeAccount']).parent().mouseout(function () {
+        $(this).removeClass('sso-changeOver')
+    });
   $('.'+style['infoBox']).click(openInfo);
   $('.'+style['burger-wrapper']).click(function(){
     if($('.'+style['main-navblock']).hasClass(style['navOpen'])){
